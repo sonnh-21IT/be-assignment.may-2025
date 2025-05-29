@@ -10,11 +10,11 @@ dev:
 
 # Start services using Docker Compose
 up:
-	docker-compose up -d
+	docker compose up -d
 
 # Stop services
 down:
-	docker-compose down
+	docker compose down
 
 # Run database migrations (if using Alembic)
 migrate:
