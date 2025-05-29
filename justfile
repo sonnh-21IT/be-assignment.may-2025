@@ -1,5 +1,4 @@
 # Justfile for Messaging API Backend Assignment
-set shell := ["cmd.exe", "/c"]
 
 # Install Python dependencies
 install:
