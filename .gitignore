@@ -1,0 +1,70 @@
+# Byte-compiled / cache files, etc.
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Pytest cache
+.pytest_cache/
+
+# VSCode settings
+.vscode/
+
+# Env files
+.env
+.env.*
+
+# Docker
+*.log
+*.pid
+*.pid.lock
+
+# Jupyter
+.ipynb_checkpoints/
+
+# MyPy
+.mypy_cache/
+
+# Pyre
+.pyre/
+
+# Pytype
+.pytype/
+
+# Coverage
+htmlcov/
+.tox/
+.coverage
+coverage.xml
+.cache
+nosetests.xml
+*.cover
+.hypothesis/
+
+# Database files
+test.db
