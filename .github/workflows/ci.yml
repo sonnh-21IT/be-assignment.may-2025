@@ -33,5 +33,21 @@ jobs:
       - name: Install dependencies
         run: just install
 
+      - name: Start services (Docker Compose)
+        run: just up
+
+      - name: Wait for services to be healthy
+        run: |
+          echo "Waiting for PostgreSQL to be healthy..."
+          timeout 300s bash -c 'until docker compose ps | grep -q "db.*(healthy)"; do sleep 5; done'
+          echo "PostgreSQL is healthy!"
+
+          echo "Waiting for FastAPI API to be up..."
+          timeout 300s bash -c 'until docker compose ps | grep -q "api.*Up"; do sleep 5; done'
+
       - name: Run tests
         run: just test
+
+      - name: Stop services (Docker Compose)
+        if: always()
+        run: just down
